@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateEntry } from '../actions/journalentry';
-import { Header, Image, Button, Form, Container, Label } from 'semantic-ui-react';
+import { Header, Button, Form, Container } from 'semantic-ui-react';
 
 class JournalEditForm extends Component {
   entry = this.props.entries.find( ent => ent._id === this.props.id);
@@ -28,7 +28,7 @@ render() {
           <label>Entry</label>
           <textarea ref={ n => this.body = n } defaultValue={body} />
         </Form.Field>
-      
+
           <Button basic color='black' content='Cancel' icon='cancel' labelPosition='left' onClick={() => this.props.toggleEdit()} />
           <Button basic color='green' content='Save' icon='save' labelPosition='left' floated='right' />
       </Form>

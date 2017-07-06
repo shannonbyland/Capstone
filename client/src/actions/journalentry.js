@@ -51,7 +51,3 @@ export const deleteEntry = (id) => {
     }).then( () => dispatch({ type: 'DELETE_ENTRY', id }));
   }
 }
-
-export const imgUpload = () => {
-
-}
