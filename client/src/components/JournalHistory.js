@@ -28,8 +28,23 @@ class JournalHistory extends Component {
             <Item.Description>{ ent.body }</Item.Description>
             <br />
             <Item.Extra>
-              <Button basic color='black' icon='edit' labelPosition='left' size='small' onClick={() => this.toggleEdit(ent._id)} content='Edit' />
-              <Button basic color='red' icon='trash outline' labelPosition='left' size='small' floated='right' onClick={() => this.props.dispatch(deleteEntry(ent._id))} content='Delete' />
+              <Button
+                basic color='black'
+                icon='edit'
+                labelPosition='left'
+                size='small'
+                onClick={() => this.toggleEdit(ent._id)}
+                content='Edit'
+               />
+              <Button
+                basic color='red'
+                icon='trash outline'
+                labelPosition='left'
+                size='small'
+                floated='right'
+                onClick={() => this.props.dispatch(deleteEntry(ent._id))}
+                content='Delete'
+              />
             </Item.Extra>
           </Item.Content>
         </Item>
@@ -39,7 +54,6 @@ class JournalHistory extends Component {
 
   toggleEdit = (id) => {
     this.setState({ edit: !this.state.edit, id });
-
   }
 
   updateEntry = (title, body) => {
