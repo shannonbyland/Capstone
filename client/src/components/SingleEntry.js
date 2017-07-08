@@ -29,8 +29,25 @@ class SingleEntry extends Component {
             <Divider />
             <p>{body}</p>
             <Divider  />
-            <Button basic color='black' icon='edit' labelPosition='left' size='small' onClick={() => this.toggleEdit(ent._id)} content='Edit' />
-            <Button basic color='red' icon='trash outline' labelPosition='left' size='small' floated='right' onClick={() => this.props.dispatch(deleteEntry(ent._id))} content='Delete' />
+            <Button
+              basic
+              color='black'
+              icon='edit'
+              labelPosition='left'
+              size='small'
+              onClick={() => this.toggleEdit(ent._id)}
+              content='Edit'
+            />
+            <Button
+              basic
+              color='red'
+              icon='trash outline'
+              labelPosition='left'
+              size='small'
+              floated='right'
+              onClick={() => this.props.dispatch(deleteEntry(ent._id, this.props.history))} 
+              content='Delete'
+            />
           </Container>
         )
       }

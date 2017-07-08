@@ -40,7 +40,7 @@ export const updateEntry = (id, title, body, image) => {
 }
 
 // DELETE AN ENTRY
-export const deleteEntry = (id) => {
+export const deleteEntry = (id, history) => {
   return(dispatch) => {
     fetch(`/api/journal/${id}`, {
       method: 'DELETE',
@@ -48,6 +48,9 @@ export const deleteEntry = (id) => {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
-    }).then( () => dispatch({ type: 'DELETE_ENTRY', id }));
+    }).then( () => {
+      dispatch({ type: 'DELETE_ENTRY', id });
+      history.push('/history');
+    });
   }
 }

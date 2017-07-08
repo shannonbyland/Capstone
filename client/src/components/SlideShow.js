@@ -14,19 +14,18 @@ class SlideShow extends Component {
   render() {
     const renderJournals = this.props.topFive.map(journal => {
       return (
-        <div key={journal._id}>
-          <Link to={`/singleentry/${journal._id}`} key={journal._id}>
-          <p className="legend">{journal.title}</p>
-
-            <Image
-              cloudName="journal-love"
-              publicId={journal.image}
-              width="500"
-              height="700"
-              crop="crop"
-            />
-          </Link>
-        </div>
+        <Link to={`/singleentry/${journal._id}`}>
+          <div key={journal._id}>
+            <p className="legend">{journal.title}</p>
+              <Image
+                cloudName="journal-love"
+                publicId={journal.image}
+                width="500"
+                height="700"
+                crop="crop"
+              />
+          </div>
+        </Link>
       )
     })
 
