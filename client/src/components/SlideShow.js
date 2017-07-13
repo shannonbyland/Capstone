@@ -14,7 +14,7 @@ class SlideShow extends Component {
   render() {
     const renderJournals = this.props.topFive.map(journal => {
       return (
-        <Link to={`/singleentry/${journal._id}`}>
+        <Link to={`/singleentry/${journal._id}`} key={journal._id}>
           <div key={journal._id}>
             <p className="legend">{journal.title}</p>
               <Image

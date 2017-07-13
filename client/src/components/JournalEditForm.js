@@ -28,9 +28,19 @@ render() {
           <label>Entry</label>
           <textarea ref={ n => this.body = n } defaultValue={body} />
         </Form.Field>
-
-          <Button basic color='black' content='Cancel' icon='cancel' labelPosition='left' onClick={() => this.props.toggleEdit()} />
-          <Button basic color='green' content='Save' icon='save' labelPosition='left' floated='right' />
+          <Button
+            basic color='black'
+            content='Cancel'
+            icon='cancel'
+            labelPosition='left'
+            onClick={() => this.props.toggleEdit()}
+          />
+          <Button
+            basic color='green'
+            content='Save'
+            icon='save'
+            labelPosition='left'
+            floated='right' />
       </Form>
     </Container>
     )

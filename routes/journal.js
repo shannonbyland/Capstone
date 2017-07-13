@@ -2,12 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Journal = require('../models/journal');
 
-//CRUD
-//get - fetching data from the database
-//post - creating a new document
-// put - updating an exsisting doucment
-//delete - destroying an exsisting document
-
 // Journal index, getting all the entries
 router.get('/', (req, res) => {
   Journal.find( ( err, entries) => {

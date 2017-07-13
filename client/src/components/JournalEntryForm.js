@@ -51,7 +51,7 @@ class JournalEntryForm extends React.Component {
             placeholder='Journal Body'
             required
           />
-          <DropZone setUrl={this.setUrl} setFileUploading={this.setFileUploading} required />
+          <DropZone setUrl={this.setUrl} setFileUploading={this.setFileUploading} />
           <Image src={url} size='small' />
           <Button basic color='green' content='Save' icon='save' labelPosition='left' />
         </Form>

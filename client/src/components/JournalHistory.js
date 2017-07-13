@@ -23,26 +23,32 @@ class JournalHistory extends Component {
           <Item.Content>
             <Item.Header as='a' href={"/SingleEntry/" + ent._id}>{ ent.title }</Item.Header>
             <Item.Meta>
-              <Timestamp time={ ent.created_at } format="date" className='cinema' />
+              <Timestamp
+                time={ ent.created_at }
+                format="date"
+                className='cinema'
+              />
             </Item.Meta>
             <Item.Description>{ ent.body }</Item.Description>
             <br />
             <Item.Extra>
               <Button
-                basic color='black'
+                basic
+                color='black'
                 icon='edit'
                 labelPosition='left'
                 size='small'
                 onClick={() => this.toggleEdit(ent._id)}
                 content='Edit'
-               />
+              />
               <Button
-                basic color='red'
+                basic
+                color='red'
                 icon='trash outline'
                 labelPosition='left'
                 size='small'
                 floated='right'
-                onClick={() => this.props.dispatch(deleteEntry(ent._id))}
+                onClick={() => this.props.dispatch(deleteEntry(ent._id, this.props.history))}
                 content='Delete'
               />
             </Item.Extra>
@@ -54,6 +60,7 @@ class JournalHistory extends Component {
 
   toggleEdit = (id) => {
     this.setState({ edit: !this.state.edit, id });
+
   }
 
   updateEntry = (title, body) => {
