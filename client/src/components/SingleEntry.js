@@ -45,7 +45,7 @@ class SingleEntry extends Component {
               labelPosition='left'
               size='small'
               floated='right'
-              onClick={() => this.props.dispatch(deleteEntry(ent._id, this.props.history))} 
+              onClick={() => this.props.dispatch(deleteEntry(ent._id, this.props.history))}
               content='Delete'
             />
           </Container>
