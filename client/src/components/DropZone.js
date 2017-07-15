@@ -1,7 +1,8 @@
-import React from 'react';
+  import React from 'react';
   import { connect } from 'react-redux';
   import Dropzone from 'react-dropzone';
   import request from 'superagent';
+  import { addEntry } from '../actions/journalentry';
 
   class DropZone extends React.Component {
     state = { files: [] }
