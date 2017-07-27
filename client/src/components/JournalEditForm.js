@@ -21,7 +21,10 @@ class JournalHistory extends Component {
           <Item.Image size='small' src={ ent.image } />
 
           <Item.Content>
-            <Item.Header as='a' href={"/SingleEntry/" + ent._id}>{ ent.title }</Item.Header>
+            <Item.Header
+              as='a'
+              href={"/SingleEntry/" + ent._id}>{ ent.title }
+            </Item.Header>
             <Item.Meta>
               <Timestamp
                 time={ ent.created_at }

@@ -1,4 +1,3 @@
-//{ type: 'DELETE_NOTE' id: 'ssdj3r44klj43lk5j43' }
 const journal = ( state = [], action ) => {
   switch (action.type) {
     case 'ENTRY':

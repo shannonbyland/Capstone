@@ -1,7 +1,4 @@
-// GET ALL ENTRIES
 export const getEntries = () => {
-  // Redux THUNK
-  // anytime we have a async action like fetch we need a THUNK
   return(dispatch) => {
     fetch('/api/journal')
       .then( res => res.json() )

@@ -70,7 +70,8 @@ class SingleEntry extends Component {
           <JournalEditForm
             id={this.state.id}
             toggleEdit={this.toggleEdit}
-            updateEntry={this.updateEntry}/>
+            updateEntry={this.updateEntry}
+          />
           : this.displayEntry() }
       </div>
     )
